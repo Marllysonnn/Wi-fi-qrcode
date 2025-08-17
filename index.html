@@ -11,13 +11,31 @@
 
 <body>
   <main>
-    <h1>Gerar QR Code Wi-Fi</h1>
-    <label for="ssid">SSID<span>*</span></label>
-    <input id="ssid" placeholder="Ex: MinhaRede" />
-    <label for="password">Senha<span>*</span></label>
-    <input id="password" type="password" placeholder="Senha123" />
-    <label for="encryption">Tipo de segurança</label>
-    <input id="encryption" value="WPA" placeholder="WPA/WEP" />
+    <h1>Gerador de QR Code</h1>
+    <label for="typeSelect">Tipo de QR Code</label>
+    <select id="typeSelect" onchange="atualizarCampos()">
+      <option value="wifi">Wi-Fi</option>
+      <option value="pix">PIX</option>
+    </select>
+
+    <div id="wifiFields">
+      <label for="ssid">SSID</label>
+      <input id="ssid" placeholder="Ex: MinhaRede" />
+      <label for="password">Senha</label>
+      <input id="password" type="password" placeholder="Senha123" />
+      <label for="encryption">Tipo de segurança</label>
+      <input id="encryption" value="WPA" placeholder="WPA/WEP" />
+    </div>
+
+    <div id="pixFields" style="display:none;">
+      <label for="pixKey">Chave PIX</label>
+      <input id="pixKey" placeholder="Ex: email@dominio.com, CPF, chave aleatoria ou numero" />
+      <label for="amount">Valor (opcional)</label>
+      <input id="amount" type="number" placeholder="Ex: 50.00" />
+      <label for="pixMessage">Mensagem (opcional)</label>
+      <input id="pixMessage" placeholder="Ex: Pagamento" />
+    </div>
+
     <button onclick="gerarQRCode()">Gerar QR Code</button>
     <div id="errorMsg"></div>
 

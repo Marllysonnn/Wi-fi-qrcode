@@ -9,10 +9,6 @@ body {
     margin: 0;
 }
 
-* {
-    color: #fff;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -28,6 +24,12 @@ main {
 h1 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    color: #fff;
+}
+
+#wifiFields, #pixFields{
+    display: flex;
+    flex-direction: column;
 }
 
 label {
@@ -35,6 +37,7 @@ label {
     text-align: left;
     margin: 0.5rem 0 0.2rem;
     font-weight: bold;
+    color: #fff;
 }
 
 span {
@@ -43,6 +46,7 @@ span {
 }
 
 input {
+    width: auto;
     padding: 0.6rem;
     margin-bottom: 1rem;
     border-radius: 0.3rem;
@@ -52,6 +56,13 @@ input {
 
 input:focus {
     outline: none;
+}
+
+#typeSelect{
+    border-radius: 0.3rem;
+    color: #000;
+    padding: 0.4em 0;
+    margin-bottom: 2em;
 }
 
 button {
@@ -71,6 +82,7 @@ button:hover {
 }
 
 #qrcodeContainer {
+    width: auto;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -80,7 +92,7 @@ button:hover {
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    animation-duration: 0.8s;
+    animation-duration: 0.4s;
 }
 
 #qrcode {
@@ -88,10 +100,9 @@ button:hover {
 }
 
 #errorMsg {
-    color: #AF5D63;
+    color: red;
     margin-top: 1rem;
     font-size: 0.9rem;
-    font-weight: 600;
     display: none;
 }
 
@@ -107,7 +118,7 @@ button:hover {
 }
 
 .qrButton:hover {
-    background: #224447;
+    background: #2b4b4e;
 }
 
 @keyframes fadeIn {
@@ -134,15 +145,14 @@ button:hover {
     }
 }
 
-
 @media (max-width: 480px) {
     body {
         flex-direction: column;
-        padding: rem;
+        padding: 1rem;
     }
 
     main {
-        width: auto;
+        width: 80%;
     }
 
     #qrcodeContainer {

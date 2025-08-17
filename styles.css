@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #C0BCB5;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background: #4A6C6F;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    text-align: center;
+    animation-duration: 0.4s;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+}
+
+span {
+    margin-left: 0.3em;
+    color: #AF5D63;
+}
+
+input {
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #AF5D63;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #8a373d;
+}
+
+#qrcodeContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation-duration: 0.8s;
+}
+
+#qrcode {
+    margin-bottom: 1rem;
+}
+
+#errorMsg {
+    color: #AF5D63;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: none;
+}
+
+.qrButton {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    background: #4A6C6F;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.qrButton:hover {
+    background: #224447;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: rem;
+    }
+
+    main {
+        width: auto;
+    }
+
+    #qrcodeContainer {
+        width: auto;
+    }
+}
